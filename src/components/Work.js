@@ -55,13 +55,13 @@ export default function Work() {
     <div className="w-full text-white overflow-hidden">
       {/* Slide */}
       <div
-        className={`flex items-center justify-center gap-24 transform transition-all duration-300 ease-in-out lg:h-[50vh] ${
+        className={`lg:flex items-center justify-center gap-24 transform transition-all duration-300 ease-in-out lg:h-[50vh] lg:space-y-0 space-y-8 ${
           fade ? "opacity-100 translate-x-0" : "opacity-0 -translate-x-10"}`}>
         <div className="space-y-4">
-          <p className="font-darker md:text-5xl text-2xl font-bold uppercase text-yellow-100">
+          <p className="font-darker md:text-5xl text-3xl font-bold uppercase text-yellow-100">
             {slides[activeIndex].number}
           </p>
-          <p className="font-darker md:text-5xl text-2xl font-bold">
+          <p className="font-darker md:text-5xl text-3xl font-bold">
             {slides[activeIndex].title}
           </p>
           <p className="text-slate-400">{slides[activeIndex].desc}</p>
@@ -70,7 +70,7 @@ export default function Work() {
           <img
             src={slides[activeIndex].img}
             alt="slide-img"
-            className="w-8/12 lg:float-right"
+            className="lg:w-8/12 w-5/12 flex mx-auto lg:float-right"
           />
         </div>
       </div>
@@ -78,7 +78,7 @@ export default function Work() {
       {/* Progress Bar */}
       <div className="mx-auto h-1.5 bg-white-100 relative overflow-hidden mt-8">
         <div
-          key={activeIndex} // this key triggers bar animation reset
+          key={activeIndex} 
           className="h-1.5 bg-yellow-100 transition-all duration-[300ms]"
           style={{ width: `${progress}%` }}
         ></div>

@@ -22,6 +22,7 @@ import ProfileCard from './ProfileCard';
 import Faq from './Faq';
 
 
+
 export default function Home() {
 
     useEffect(() => {
@@ -32,43 +33,43 @@ export default function Home() {
 
     const faqItems = [
         {
-            title: "Why Do I Choose X-Nova AI",
+            title: "What is FloCoin ($FLO)?",
             content:
-                "X-Nova AI offers unparalleled solutions tailored to your needs, ensuring seamless integration with your goals.",
+                "A utility token on Solana powering real-world use cases — from digital access to branded experiences.",
         },
         {
-            title: "What Is X-Nova AI",
+            title: "How do i get NFTs?",
             content:
-                "X-Nova Ai Custom AI Bot is a versatile platform that empowers individuals and organizations to create tailored AI agents designed to meet their unique requirements. Whether for business, education, or personal use, this solution enables you to build and deploy AI bots that align perfectly with your goals.",
+                "A utility token on Solana powering real-world use cases — from digital access to branded experiences.",
         },
         {
-            title: "How Can I Gain Access?",
+            title: "Is $FLO audited?",
             content:
-                "You can gain access by signing up on the official X-Nova platform and following the guided process to create your personalized AI bot.",
+                "A utility token on Solana powering real-world use cases — from digital access to branded experiences.",
         },
         {
-            title: "How Do I Benefit From It?",
+            title: "Does $FLO offer staking or token burns?",
             content:
-                "X-Nova AI helps automate tasks, improve efficiency, and provide personalized AI solutions, saving time and resources.",
+                "A utility token on Solana powering real-world use cases — from digital access to branded experiences.",
         },
     ];
 
     return (
         <div className="bg-black-100 font-mulish overflow-hidden text-white-100">
 
-            <section className="lg:px-20 px-5 h-screen">
+            <section className="lg:px-20 px-5 lg:h-screen">
                 <div className='container mx-auto'>
 
                     <Menu />
-                    <div className="flex flex-col justify-center items-center gap-y-6 lg:pt-28 text-center mx-auto">
+                    <div className="flex flex-col justify-center items-center gap-y-6 lg:pt-28 pt-12 text-center mx-auto">
                         <h1 data-aos='fade-down' className='lg:text-[3.5rem] text-3xl font-darker font-extrabold uppercase'>
                             Powering the Digital Transaction Layer
                         </h1>
-                        <h2 data-aos='fade-down' className='lg:text-[2.8rem] text-3xl font-darker font-extrabold uppercase pt-2'>
+                        <h2 data-aos='fade-down' className='lg:text-[2.8rem] text-3xl font-darker font-extrabold uppercase lg:pt-2'>
                             The future is digital. & So is <span className='font-bilbo text-yellow-100'>$FLO</span>
                         </h2>
 
-                        <div className="flex items-center justify-center py-6 gap-6 mx-auto">
+                        <div className="flex items-center justify-center py-5 gap-6 mx-auto">
                             <a href='/'>
                                 <img src={telegram} alt='telegram' className='w-10'></img>
                             </a>
@@ -106,15 +107,15 @@ export default function Home() {
 
             {/* abous us section */}
 
-            <section id='about' className="lg:px-20 px-5 lg:py-20 py-6 relative z-10">
+            <section id='about' className="lg:px-20 px-5 lg:py-20 py-6">
                 <div className='container mx-auto'>
 
-                    <div className='flex flex-col gap-y-5 items-center mx-auto justify-start w-10/12 md:p-16 p-6 border-2 rounded-xl text-center bg-lines lg:h-[75vh] border-blue-100'>
-                        <p className='font-darker text-4xl font-bold uppercase'>About FloCoin</p>
+                    <div className='flex flex-col gap-y-5 items-center mx-auto justify-start lg:w-10/12 md:p-16 p-5 border-2 rounded-xl text-center bg-lines lg:h-[75vh] border-blue-100'>
+                        <p className='font-darker md:text-4xl font-bold uppercase'>About FloCoin</p>
 
-                        <p className='font-darker text-5xl font-extrabold uppercase'>Digital Utility with Real-World Use</p>
+                        <p className='font-darker md:text-5xl text-3xl font-extrabold uppercase'>Digital Utility with Real-World Use</p>
 
-                        <p data-aos='fade-up' className='md:text-xl tracking-wide lg:leading-loose'>
+                        <p data-aos='fade-in' className='md:text-xl tracking-wide lg:leading-loose'>
                             FloCoin ($FLO) is a Solana-based utility token built for fast, frictionless digital value exchange. Whether it’s access to perks, payments between creators, or powering branded experiences — $FLO bridges Web3 flexibility with real-world outcomes.
                         </p>
                     </div>
@@ -188,60 +189,60 @@ export default function Home() {
             <section id='utility' className="lg:px-20 px-5 lg:pb-20 py-6">
                 <div className='container mx-auto'>
 
-                    <div className='md:space-y-12 space-y-6'>
-                        <h3 className='md:text-7xl text-3xl font-darker font-extrabold mb-8'>Core Utilities</h3>
+                    <div className='md:space-y-12 space-y-8'>
+                        <h3 className='md:text-7xl text-4xl font-darker font-extrabold'>Core Utilities</h3>
 
-                        <div className='flex flex-wrap items-center gap-6'>
+                        <div className='flex lg:items-center items-start md:gap-6 gap-4 pt-5'>
                             <div>
-                                <img src={utility1} alt='' className='w-40'></img>
+                                <img src={utility1} alt='' className='md:w-40 w-24'></img>
                             </div>
                             <div>
-                                <p className='md:text-6xl text-3xl font-black text-yellow-100 uppercase'>
+                                <p className='md:text-6xl text-2xl font-black text-yellow-100 uppercase'>
                                     NFT Ticketing
                                 </p>
-                                <p className='text-white-50 font-black uppercase pt-3'>
+                                <p className='text-white-50 md:font-black font-bold uppercase pt-3'>
                                     On-chain tickets with tradability and authenticity
                                 </p>
                             </div>
                         </div>
 
-                        <div className='flex flex-wrap items-center gap-6'>
+                        <div className='flex lg:items-center items-start md:gap-6 gap-4'>
                             <div>
-                                <img src={utility2} alt='' className='w-40'></img>
+                                <img src={utility2} alt='' className='md:w-40 w-16'></img>
                             </div>
                             <div>
-                                <p className='md:text-6xl text-3xl font-black text-yellow-100 uppercase'>
+                                <p className='md:text-6xl text-2xl font-black text-yellow-100 uppercase'>
                                     INSTANT PAYMENTS
                                 </p>
-                                <p className='text-white-50 font-black uppercase pt-3'>
+                                <p className='text-white-50 md:font-black font-bold uppercase pt-3'>
                                     Send and receive value instantly
                                 </p>
                             </div>
                         </div>
 
-                        <div className='flex flex-wrap items-center gap-6'>
+                        <div className='flex lg:items-center items-start md:gap-6 gap-4'>
                             <div>
-                                <img src={utility3} alt='' className='w-40'></img>
+                                <img src={utility3} alt='' className='md:w-40 w-24'></img>
                             </div>
                             <div>
-                                <p className='md:text-6xl text-3xl font-black text-yellow-100 uppercase'>
+                                <p className='md:text-6xl text-2xl font-black text-yellow-100 uppercase'>
                                     Campaign Access
                                 </p>
-                                <p className='text-white-50 font-black uppercase pt-3'>
+                                <p className='text-white-50 md:font-black font-bold uppercase pt-3'>
                                     Fuel brand activations or limited-access drops
                                 </p>
                             </div>
                         </div>
 
-                        <div className='flex flex-wrap items-center gap-6'>
+                        <div className='flex lg:items-center items-start md:gap-6 gap-4'>
                             <div>
-                                <img src={utility4} alt='' className='w-40'></img>
+                                <img src={utility4} alt='' className='md:w-40 w-24'></img>
                             </div>
                             <div>
-                                <p className='md:text-6xl text-3xl font-black text-yellow-100 uppercase'>
+                                <p className='md:text-6xl text-2xl font-black text-yellow-100 uppercase'>
                                     Gamified Rewards
                                 </p>
-                                <p className='text-white-50 font-black uppercase pt-3'>
+                                <p className='text-white-50 md:font-black font-bold uppercase pt-3'>
                                     Earn Action Points, unlock perks, get rewarded
                                 </p>
                             </div>
@@ -259,15 +260,15 @@ export default function Home() {
                     <div className='space-y-8'>
                         <h3 className='md:text-7xl text-3xl font-darker font-extrabold'>Trust & Security</h3>
 
-                        <p className='md:text-5xl text-3xl font-black text-yellow-100 uppercase'>
+                        <p className='md:text-5xl text-2xl font-black text-yellow-100 uppercase'>
                             Developed by a certified SAFU developer
                         </p>
 
                         <p className='font-black uppercase'>Audited by CFG NINJA & SOLIDPROOF</p>
 
                         <div className='flex items-start md:gap-28 gap-12 lg:py-6'>
-                            <img src={trust1} alt='trust' className='w-52'></img>
-                            <img src={trust2} alt='trust' className='w-52'></img>
+                            <img src={trust1} alt='trust' className='md:w-52 w-28'></img>
+                            <img src={trust2} alt='trust' className='md:w-52 w-28'></img>
                         </div>
 
                         <p className='font-black uppercase text-white-50'>FloCoin is built with transparency, performance, and long-term trust in mind.</p>
@@ -303,7 +304,7 @@ export default function Home() {
             <section id='use' className="lg:px-20 px-5 lg:py-20 py-6">
                 <div className='container mx-auto'>
 
-                    <div className='flex items-start justify-between md:gap-28 gap-12 lg:py-6'>
+                    <div className='flex flex-wrap items-start justify-between md:gap-28 gap-12 lg:py-6'>
                         <div className='space-y-5 lg:w-5/12'>
                             <p className='md:text-5xl text-3xl font-black'>
                                 Team
@@ -316,7 +317,7 @@ export default function Home() {
                             </p>
                         </div>
 
-                        <div>
+                        <div className='flex mx-auto'>
                             <ProfileCard
                                 name="Javi A. Torres"
                                 title="Software Engineer"
@@ -335,10 +336,10 @@ export default function Home() {
 
             {/* tokenomics section */}
 
-            <section id='use' className="lg:px-20 px-5 lg:py-20 py-6">
+            <section id='tokenomics' className="lg:px-20 px-5 lg:py-20 py-6">
                 <div className='container mx-auto'>
 
-                    <div className='flex items-start justify-between md:gap-28 gap-12 lg:py-6'>
+                    <div className='flex flex-wrap items-start justify-between md:gap-28 gap-12 lg:py-6'>
                         <div className=''>
                             <p className='md:text-5xl text-3xl font-black md:mb-12 mb-6'>Tokenomics</p>
 
@@ -355,11 +356,56 @@ export default function Home() {
                             </div>
                         </div>
                         <div>
-                            <img src={coin} alt='coin'></img>
+                            <img src={coin} alt='coin' className='lg:block hidden'></img>
                         </div>
                     </div>
                 </div>
             </section>
+
+            {/* faq section */}
+
+            <section id='faq' className="lg:px-20 px-5 py-6">
+                <div className='container mx-auto'>
+                    <div className='text-center'>
+                        <p className='text-yellow-100 uppercase text-xl tracking-wide font-extrabold pb-2'>
+                            Questions
+                        </p>
+                        <h3 className='md:text-5xl text-3xl font-black uppercase'>
+                            FAq
+                        </h3>
+                    </div>
+                    <div className='lg:py-16 py-8'>
+                        <Faq items={faqItems} />
+                    </div>
+
+                    <div className="flex items-center justify-center py-6 gap-6 mx-auto">
+                        <a href='/'>
+                            <img src={telegram} alt='telegram' className='w-10'></img>
+                        </a>
+                        <a href='/'>
+                            <img src={instagram} alt='telegram' className='w-10'></img>
+                        </a>
+                        <a href='/'>
+                            <img src={x} alt='telegram' className='w-10'></img>
+                        </a>
+                        <a href='/'>
+                            <img src={discord} alt='telegram' className='w-10'></img>
+                        </a>
+                    </div>
+
+                    <div className='text-center space-y-5'>
+                        <p className=''>
+                            Don’t hesitate to subscribe to latest news about ICo markets as well as crucial<br></br> financial knowledge to become successful investors globally
+                        </p>
+
+                        <p>© 2025. All rights reserved by flocoin</p>
+                    </div>
+
+                </div>
+            </section>
+
+
+
         </div>
     )
 }  
