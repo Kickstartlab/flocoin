@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react'
+import React, { useEffect, useRef } from 'react'
 import Menu from './Menu'
 import mesh from '../assets/mesh.png';
 import utility1 from '../assets/utility1.png';
@@ -20,10 +20,13 @@ import Work from './Work';
 import CircularGallery from './CircularGallery';
 import ProfileCard from './ProfileCard';
 import Faq from './Faq';
-
+import VariableProximity from './VariableProximity';
+import Wave from './Wave';
 
 
 export default function Home() {
+
+    const containerRef = useRef(null);
 
     useEffect(() => {
         AOS.init({
@@ -57,49 +60,79 @@ export default function Home() {
     return (
         <div className="bg-black-100 font-mulish overflow-hidden text-white-100">
 
-            <section className="lg:px-20 px-5 lg:h-screen">
+            <div className='absolute left-0 right-0 top-96 lg:block hidden'>
+                <Wave />
+            </div>
+
+            <section className="lg:px-20 px-5 lg:h-screen relative z-20">
                 <div className='container mx-auto'>
 
                     <Menu />
                     <div className="flex flex-col justify-center items-center gap-y-6 lg:pt-28 pt-12 text-center mx-auto">
-                        <h1 data-aos='fade-down' className='lg:text-[3.5rem] text-3xl font-darker font-extrabold uppercase'>
-                            Powering the Digital Transaction Layer
-                        </h1>
-                        <h2 data-aos='fade-down' className='lg:text-[2.8rem] text-3xl font-darker font-extrabold uppercase lg:pt-2'>
-                            The future is digital. & So is <span className='font-bilbo text-yellow-100'>$FLO</span>
-                        </h2>
+
+                        <div
+                            ref={containerRef}
+                            style={{ position: 'relative' }}
+                        >
+                            <VariableProximity
+                                label={'Powering the Digital Transaction Layer'}
+                                className={'variable-proximity-demo lg:text-[3.5rem] text-3xl font-darker uppercase'}
+                                fromFontVariationSettings="'wght' 500, 'opsz' 9"
+                                toFontVariationSettings="'wght' 1000, 'opsz' 40"
+                                containerRef={containerRef}
+                                radius={100}
+                                falloff='linear'
+                            />
+                        </div>
+                        <div
+                            ref={containerRef}
+                            style={{ position: 'relative' }}
+
+                        >
+                            <VariableProximity
+                                label={'The future is digital So is $FLO'}
+                                className={'variable-proximity-demo lg:text-[3.5rem] text-3xl font-darker uppercase'}
+                                fromFontVariationSettings="'wght' 500, 'opsz' 9"
+                                toFontVariationSettings="'wght' 1000, 'opsz' 40"
+                                containerRef={containerRef}
+                                radius={100}
+                                falloff='linear'
+                            />
+                        </div>
+                        {/* <h2 data-aos='fade-down' className='lg:text-[2.8rem] text-3xl font-darker font-extrabold uppercase lg:pt-2'>
+                            The future is digital. & So is <span className='font-bilbo text-yellow-100'></span>
+                        </h2> */}
 
                         <div className="flex items-center justify-center py-5 gap-6 mx-auto">
                             <a href='/'>
-                                <img src={telegram} alt='telegram' className='w-10'></img>
+                                <img src={telegram} alt='telegram' className='w-10 hover:-translate-y-2 duration-200'></img>
                             </a>
                             <a href='/'>
-                                <img src={instagram} alt='telegram' className='w-10'></img>
+                                <img src={instagram} alt='telegram' className='w-10 hover:-translate-y-2 duration-200'></img>
                             </a>
                             <a href='/'>
-                                <img src={x} alt='telegram' className='w-10'></img>
+                                <img src={x} alt='telegram' className='w-10 hover:-translate-y-2 duration-200'></img>
                             </a>
                             <a href='/'>
-                                <img src={discord} alt='telegram' className='w-10'></img>
+                                <img src={discord} alt='telegram' className='w-10 hover:-translate-y-2 duration-200'></img>
                             </a>
                         </div>
 
-                        <div className="flex items-center justify-center md:gap-8 gap-6 mx-auto ">
+                        <div className="flex items-center justify-center md:gap-8 gap-3 mx-auto ">
                             <a href="/">
-                                <button className="rounded-full py-3 font-extrabold px-6 bg-yellow-100 text-black-100 uppercase">
+                                <button className="rounded-full py-3 font-extrabold px-5 bg-yellow-100 text-black-100 uppercase">
                                     Launch APP
                                 </button>
                             </a>
 
                             <a href="/">
-                                <button className="rounded-full py-3 font-extrabold px-6 bg-yellow-100 text-black-100 uppercase">
+                                <button className="rounded-full py-3 font-extrabold px-5 bg-yellow-100 text-black-100 uppercase">
                                     Whitepaper
                                 </button>
                             </a>
                         </div>
-
-                        <div className=''>
-                            <img data-aos='fade-in' data-aos-delay='100' src={mesh} alt='' className='w-full lg:absolute left-0 right-0'></img>
+                        <div className='absolute left-0 right-0 top-80 mt-36 lg:hidden block'>
+                            <Wave />
                         </div>
                     </div>
                 </div>
@@ -107,7 +140,7 @@ export default function Home() {
 
             {/* abous us section */}
 
-            <section id='about' className="lg:px-20 px-5 lg:py-20 py-6">
+            <section id='about' className="lg:px-20 px-5 lg:py-20 pt-16 pb-6">
                 <div className='container mx-auto'>
 
                     <div className='flex flex-col gap-y-5 items-center mx-auto justify-start lg:w-10/12 md:p-16 p-5 border-2 rounded-xl text-center bg-lines lg:h-[75vh] border-blue-100'>
@@ -380,16 +413,16 @@ export default function Home() {
 
                     <div className="flex items-center justify-center py-6 gap-6 mx-auto">
                         <a href='/'>
-                            <img src={telegram} alt='telegram' className='w-10'></img>
+                            <img src={telegram} alt='telegram' className='w-10 hover:-translate-y-2 duration-200'></img>
                         </a>
                         <a href='/'>
-                            <img src={instagram} alt='telegram' className='w-10'></img>
+                            <img src={instagram} alt='telegram' className='w-10 hover:-translate-y-2 duration-200'></img>
                         </a>
                         <a href='/'>
-                            <img src={x} alt='telegram' className='w-10'></img>
+                            <img src={x} alt='telegram' className='w-10 hover:-translate-y-2 duration-200'></img>
                         </a>
                         <a href='/'>
-                            <img src={discord} alt='telegram' className='w-10'></img>
+                            <img src={discord} alt='telegram' className='w-10 hover:-translate-y-2 duration-200'></img>
                         </a>
                     </div>
 
