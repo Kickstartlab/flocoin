@@ -69,39 +69,37 @@ export default function Home() {
 
                     <Menu />
                     <div className="flex flex-col justify-center items-center gap-y-6 lg:pt-28 pt-12 text-center mx-auto">
+                        <div data-aos='fade-up' className='space-y-5'>
+                            <div
+                                ref={containerRef}
+                                style={{ position: 'relative' }}
+                            >
+                                <VariableProximity
+                                    label={'Powering the Digital Transaction Layer'}
+                                    className={'variable-proximity-demo lg:text-[3.5rem] text-3xl font-darker uppercase'}
+                                    fromFontVariationSettings="'wght' 500, 'opsz' 9"
+                                    toFontVariationSettings="'wght' 1000, 'opsz' 40"
+                                    containerRef={containerRef}
+                                    radius={100}
+                                    falloff='linear'
+                                />
+                            </div>
+                            <div
+                                ref={containerRef}
+                                style={{ position: 'relative' }}
 
-                        <div
-                            ref={containerRef}
-                            style={{ position: 'relative' }}
-                        >
-                            <VariableProximity
-                                label={'Powering the Digital Transaction Layer'}
-                                className={'variable-proximity-demo lg:text-[3.5rem] text-3xl font-darker uppercase'}
-                                fromFontVariationSettings="'wght' 500, 'opsz' 9"
-                                toFontVariationSettings="'wght' 1000, 'opsz' 40"
-                                containerRef={containerRef}
-                                radius={100}
-                                falloff='linear'
-                            />
+                            >
+                                <VariableProximity
+                                    label={'The future is digital So is $FLO'}
+                                    className={'variable-proximity-demo lg:text-[3.5rem] text-3xl font-darker uppercase'}
+                                    fromFontVariationSettings="'wght' 500, 'opsz' 9"
+                                    toFontVariationSettings="'wght' 1000, 'opsz' 40"
+                                    containerRef={containerRef}
+                                    radius={100}
+                                    falloff='linear'
+                                />
+                            </div>
                         </div>
-                        <div
-                            ref={containerRef}
-                            style={{ position: 'relative' }}
-
-                        >
-                            <VariableProximity
-                                label={'The future is digital So is $FLO'}
-                                className={'variable-proximity-demo lg:text-[3.5rem] text-3xl font-darker uppercase'}
-                                fromFontVariationSettings="'wght' 500, 'opsz' 9"
-                                toFontVariationSettings="'wght' 1000, 'opsz' 40"
-                                containerRef={containerRef}
-                                radius={100}
-                                falloff='linear'
-                            />
-                        </div>
-                        {/* <h2 data-aos='fade-down' className='lg:text-[2.8rem] text-3xl font-darker font-extrabold uppercase lg:pt-2'>
-                            The future is digital. & So is <span className='font-bilbo text-yellow-100'></span>
-                        </h2> */}
 
                         <div className="flex items-center justify-center py-5 gap-6 mx-auto">
                             <a href='/'>
@@ -119,13 +117,13 @@ export default function Home() {
                         </div>
 
                         <div className="flex items-center justify-center md:gap-8 gap-3 mx-auto ">
-                            <a href="/">
+                            <a data-aos='fade-left' href="/">
                                 <button className="rounded-full py-3 font-extrabold px-5 bg-yellow-100 text-black-100 uppercase">
                                     Launch APP
                                 </button>
                             </a>
 
-                            <a href="/">
+                            <a data-aos='fade-right' href="/">
                                 <button className="rounded-full py-3 font-extrabold px-5 bg-yellow-100 text-black-100 uppercase">
                                     Whitepaper
                                 </button>
@@ -161,7 +159,7 @@ export default function Home() {
                 <div className='container mx-auto'>
 
                     <div className='flex flex-col justify-center mx-auto lg:w-8/12'>
-                        <p className='font-darker md:text-5xl text-2xl font-extrabold'>How We work</p>
+                        <p data-aos='fade-up' className='font-darker md:text-5xl text-2xl font-extrabold'>How We work</p>
 
                         <Work />
                     </div>
@@ -180,7 +178,7 @@ export default function Home() {
             <section id='use' className="lg:px-20 px-5 lg:py-28 py-6">
                 <div className='container mx-auto'>
 
-                    <div className='space-y-8'>
+                    <div data-aos='fade-right' className='space-y-8'>
                         <h3 className='md:text-7xl text-3xl font-darker font-extrabold'>How to Use $FLO</h3>
 
                         <div>
@@ -222,7 +220,7 @@ export default function Home() {
             <section id='utility' className="lg:px-20 px-5 lg:pb-20 py-6">
                 <div className='container mx-auto'>
 
-                    <div className='md:space-y-12 space-y-8'>
+                    <div data-aos='fade-left' className='md:space-y-12 space-y-8'>
                         <h3 className='md:text-7xl text-4xl font-darker font-extrabold'>Core Utilities</h3>
 
                         <div className='flex lg:items-center items-start md:gap-6 gap-4 pt-5'>
@@ -291,22 +289,22 @@ export default function Home() {
                 <div className='container mx-auto'>
 
                     <div className='space-y-8'>
-                        <h3 className='md:text-7xl text-3xl font-darker font-extrabold'>Trust & Security</h3>
+                        <h3 data-aos='fade-right' className='md:text-7xl text-3xl font-darker font-extrabold'>Trust & Security</h3>
 
-                        <p className='md:text-5xl text-2xl font-black text-yellow-100 uppercase'>
+                        <p data-aos='fade-left' className='md:text-5xl text-2xl font-black text-yellow-100 uppercase'>
                             Developed by a certified SAFU developer
                         </p>
 
                         <p className='font-black uppercase'>Audited by CFG NINJA & SOLIDPROOF</p>
 
                         <div className='flex items-start md:gap-28 gap-12 lg:py-6'>
-                            <img src={trust1} alt='trust' className='md:w-52 w-28'></img>
-                            <img src={trust2} alt='trust' className='md:w-52 w-28'></img>
+                            <img data-aos='zoom-in' src={trust1} alt='trust' className='md:w-52 w-28'></img>
+                            <img data-aos='zoom-in' src={trust2} alt='trust' className='md:w-52 w-28'></img>
                         </div>
 
                         <p className='font-black uppercase text-white-50'>FloCoin is built with transparency, performance, and long-term trust in mind.</p>
 
-                        <h3 className='md:text-7xl text-3xl font-darker font-extrabold lg:pt-12'>Real-World Presence</h3>
+                        <h3 data-aos='fade-up' className='md:text-7xl text-3xl font-darker font-extrabold lg:pt-12'>Real-World Presence</h3>
 
                         <p className='font-black text-white-50'>
                             FloCoin doesn’t just live on-chain — it shows up on the streets and on the track.<br></br>
@@ -339,13 +337,13 @@ export default function Home() {
 
                     <div className='flex flex-wrap items-start justify-between md:gap-28 gap-12 lg:py-6'>
                         <div className='space-y-5 lg:w-5/12'>
-                            <p className='md:text-5xl text-3xl font-black'>
+                            <p data-aos='fade-up' className='md:text-5xl text-3xl font-black'>
                                 Team
                             </p>
-                            <p className='md:text-3xl text-xl font-extrabold'>
+                            <p data-aos='fade-in' className='md:text-3xl text-xl font-extrabold'>
                                 Lilly Douse – Head of Communications
                             </p>
-                            <p>
+                            <p data-aos='fade-in'>
                                 Lilly leads FloCoin’s communications, partnerships, and public image. As one of the project’s public faces, she connects $FLO with audiences across both the Web3 world and real-world activations.
                             </p>
                         </div>
@@ -374,9 +372,9 @@ export default function Home() {
 
                     <div className='flex flex-wrap items-start justify-between md:gap-28 gap-12 lg:py-6'>
                         <div className=''>
-                            <p className='md:text-5xl text-3xl font-black md:mb-12 mb-6'>Tokenomics</p>
+                            <p data-aos='fade-up' className='md:text-5xl text-3xl font-black md:mb-12 mb-6'>Tokenomics</p>
 
-                            <div className='space-y-8'>
+                            <div data-aos='fade-in' className='space-y-8'>
                                 <p className='md:text-3xl text-xl font-bold'>Ticker: <span className='text-yellow-100'>$FLO</span></p>
                                 <p className='md:text-3xl text-xl font-bold'>Chain: <span className='text-yellow-100'>Solana</span>
                                 </p>
@@ -403,7 +401,7 @@ export default function Home() {
                         <p className='text-yellow-100 uppercase text-xl tracking-wide font-extrabold pb-2'>
                             Questions
                         </p>
-                        <h3 className='md:text-5xl text-3xl font-black uppercase'>
+                        <h3 data-aos='fade-up' className='md:text-5xl text-3xl font-black uppercase'>
                             FAq
                         </h3>
                     </div>
