@@ -21,7 +21,8 @@ import CircularGallery from './CircularGallery';
 import ProfileCard from './ProfileCard';
 import Faq from './Faq';
 import VariableProximity from './VariableProximity';
-import Wave from './Wave';
+import Threads from './Threads';
+
 
 
 export default function Home() {
@@ -60,8 +61,15 @@ export default function Home() {
     return (
         <div className="bg-black-100 font-mulish overflow-hidden text-white-100">
 
-            <div className='absolute left-0 right-0 top-96 lg:block hidden'>
+            {/* <div className='absolute left-0 right-0 top-96 lg:block hidden'>
                 <Wave />
+            </div> */}
+            <div className='w-full absolute left-0 right-0 h-[500px] top-1/2 lg:mt-8 -mt-16'>
+                <Threads
+                    amplitude={1}
+                    distance={0}
+                    enableMouseInteraction={true}
+                />
             </div>
 
             <section className="lg:px-20 px-5 lg:h-screen relative z-20">
@@ -128,9 +136,6 @@ export default function Home() {
                                     Whitepaper
                                 </button>
                             </a>
-                        </div>
-                        <div className='absolute left-0 right-0 top-80 mt-36 lg:hidden block'>
-                            <Wave />
                         </div>
                     </div>
                 </div>

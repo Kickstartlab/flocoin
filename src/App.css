@@ -624,3 +624,10 @@ svg {
     transform: translateY(10px);
   }
 }
+
+/* thread */
+.threads-container {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
