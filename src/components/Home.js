@@ -22,7 +22,7 @@ import ProfileCard from './ProfileCard';
 import Faq from './Faq';
 import VariableProximity from './VariableProximity';
 import Threads from './Threads';
-
+import Hyperspeed from './Hyperspeed';
 
 
 export default function Home() {
@@ -61,10 +61,7 @@ export default function Home() {
     return (
         <div className="bg-black-100 font-mulish overflow-hidden text-white-100">
 
-            {/* <div className='absolute left-0 right-0 top-96 lg:block hidden'>
-                <Wave />
-            </div> */}
-            <div className='w-full absolute left-0 right-0 h-[500px] top-1/2 lg:mt-8 -mt-16'>
+            <div className='w-full absolute left-0 right-0 h-[500px] lg:top-1/2 top-1/3 lg:mt-8'>
                 <Threads
                     amplitude={1}
                     distance={0}
@@ -146,7 +143,7 @@ export default function Home() {
             <section id='about' className="lg:px-20 px-5 lg:py-20 pt-16 pb-6">
                 <div className='container mx-auto'>
 
-                    <div className='flex flex-col gap-y-5 items-center mx-auto justify-start lg:w-10/12 md:p-16 p-5 border-2 rounded-xl text-center bg-lines lg:h-[75vh] border-blue-100'>
+                    <div className='flex flex-col gap-y-5 items-center mx-auto justify-start lg:w-10/12 md:p-16 p-5 border-2 rounded-xl text-center lg:h-[90vh] border-blue-100 relative z-20'>
                         <p className='font-darker md:text-4xl font-bold uppercase'>About FloCoin</p>
 
                         <p className='font-darker md:text-5xl text-3xl font-extrabold uppercase'>Digital Utility with Real-World Use</p>
@@ -154,6 +151,46 @@ export default function Home() {
                         <p data-aos='fade-in' className='md:text-xl tracking-wide lg:leading-loose'>
                             FloCoin ($FLO) is a Solana-based utility token built for fast, frictionless digital value exchange. Whether it’s access to perks, payments between creators, or powering branded experiences — $FLO bridges Web3 flexibility with real-world outcomes.
                         </p>
+
+                        <Hyperspeed
+                            effectOptions={{
+                                onSpeedUp: () => { },
+                                onSlowDown: () => { },
+                                distortion: 'turbulentDistortion',
+                                length: 400,
+                                roadWidth: 10,
+                                islandWidth: 2,
+                                lanesPerRoad: 4,
+                                fov: 90,
+                                fovSpeedUp: 150,
+                                speedUp: 2,
+                                carLightsFade: 0.4,
+                                totalSideLightSticks: 20,
+                                lightPairsPerRoadWay: 40,
+                                shoulderLinesWidthPercentage: 0.05,
+                                brokenLinesWidthPercentage: 0.1,
+                                brokenLinesLengthPercentage: 0.5,
+                                lightStickWidth: [0.12, 0.5],
+                                lightStickHeight: [1.3, 1.7],
+                                movingAwaySpeed: [60, 80],
+                                movingCloserSpeed: [-120, -160],
+                                carLightsLength: [400 * 0.03, 400 * 0.2],
+                                carLightsRadius: [0.05, 0.14],
+                                carWidthPercentage: [0.3, 0.5],
+                                carShiftX: [-0.8, 0.8],
+                                carFloorSeparation: [0, 5],
+                                colors: {
+                                    roadColor: 0x080808,
+                                    islandColor: 0x0a0a0a,
+                                    background: 0x000000,
+                                    shoulderLines: 0xFFFFFF,
+                                    brokenLines: 0xFFFFFF,
+                                    leftCars: [0xD856BF, 0x6750A2, 0xC247AC],
+                                    rightCars: [0x03B3C3, 0x0E5EA5, 0x324555],
+                                    sticks: 0x03B3C3,
+                                }
+                            }}
+                        />
                     </div>
                 </div>
             </section>

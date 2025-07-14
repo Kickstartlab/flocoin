@@ -620,6 +620,7 @@ svg {
   0% {
     transform: translateY(0px);
   }
+
   100% {
     transform: translateY(10px);
   }
@@ -628,6 +629,20 @@ svg {
 /* thread */
 .threads-container {
   position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+/* about bg */
+#lights {
+  width: 100%;
+  height: 90%;
+  overflow: hidden;
+  position: absolute;
+  z-index: -1;
+}
+
+canvas {
   width: 100%;
   height: 100%;
 }
