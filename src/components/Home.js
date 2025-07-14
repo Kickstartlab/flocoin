@@ -1,6 +1,5 @@
-import React, { useEffect, useRef } from 'react'
+import React, { useEffect, useRef, Suspense } from 'react'
 import Menu from './Menu'
-import mesh from '../assets/mesh.png';
 import utility1 from '../assets/utility1.png';
 import utility2 from '../assets/utility2.png';
 import utility3 from '../assets/utility3.png';
@@ -12,17 +11,17 @@ import instagram from '../assets/instagram.png';
 import trust1 from '../assets/trust1.png';
 import trust2 from '../assets/trust2.png';
 import coin from "../assets/coin.png";
-
 import AOS from 'aos';
 import 'aos/dist/aos.css';
-import CurvedLoop from './CurvedLoop';
 import Work from './Work';
-import CircularGallery from './CircularGallery';
-import ProfileCard from './ProfileCard';
 import Faq from './Faq';
 import VariableProximity from './VariableProximity';
 import Threads from './Threads';
-import Hyperspeed from './Hyperspeed';
+const Hyperspeed = React.lazy(() => import('./Hyperspeed'));
+const ProfileCard = React.lazy(() => import('./ProfileCard'));
+const CircularGallery = React.lazy(() => import('./CircularGallery'));
+const CurvedLoop = React.lazy(() => import('./CurvedLoop'));
+
 
 
 export default function Home() {
@@ -62,11 +61,13 @@ export default function Home() {
         <div className="bg-black-100 font-mulish overflow-hidden text-white-100">
 
             <div className='w-full absolute left-0 right-0 h-[500px] lg:top-1/2 top-1/3 lg:mt-8'>
-                <Threads
-                    amplitude={1}
-                    distance={0}
-                    enableMouseInteraction={true}
-                />
+                <Suspense fallback={<div>Loading...</div>}>
+                    <Threads
+                        amplitude={1}
+                        distance={0}
+                        enableMouseInteraction={true}
+                    />
+                </Suspense>
             </div>
 
             <section className="lg:px-20 px-5 lg:h-screen relative z-20">
@@ -79,45 +80,49 @@ export default function Home() {
                                 ref={containerRef}
                                 style={{ position: 'relative' }}
                             >
-                                <VariableProximity
-                                    label={'Powering the Digital Transaction Layer'}
-                                    className={'variable-proximity-demo lg:text-[3.5rem] text-3xl font-darker uppercase'}
-                                    fromFontVariationSettings="'wght' 500, 'opsz' 9"
-                                    toFontVariationSettings="'wght' 1000, 'opsz' 40"
-                                    containerRef={containerRef}
-                                    radius={100}
-                                    falloff='linear'
-                                />
+                                <Suspense fallback={<div>Loading...</div>}>
+                                    <VariableProximity
+                                        label={'Powering the Digital Transaction Layer'}
+                                        className={'variable-proximity-demo lg:text-[3.5rem] text-3xl font-darker uppercase'}
+                                        fromFontVariationSettings="'wght' 500, 'opsz' 9"
+                                        toFontVariationSettings="'wght' 1000, 'opsz' 40"
+                                        containerRef={containerRef}
+                                        radius={100}
+                                        falloff='linear'
+                                    />
+                                </Suspense>
                             </div>
                             <div
                                 ref={containerRef}
                                 style={{ position: 'relative' }}
 
                             >
-                                <VariableProximity
-                                    label={'The future is digital So is $FLO'}
-                                    className={'variable-proximity-demo lg:text-[3.5rem] text-3xl font-darker uppercase'}
-                                    fromFontVariationSettings="'wght' 500, 'opsz' 9"
-                                    toFontVariationSettings="'wght' 1000, 'opsz' 40"
-                                    containerRef={containerRef}
-                                    radius={100}
-                                    falloff='linear'
-                                />
+                                <Suspense fallback={<div>Loading...</div>}>
+                                    <VariableProximity
+                                        label={'The future is digital So is $FLO'}
+                                        className={'variable-proximity-demo lg:text-[3.5rem] text-3xl font-darker uppercase'}
+                                        fromFontVariationSettings="'wght' 500, 'opsz' 9"
+                                        toFontVariationSettings="'wght' 1000, 'opsz' 40"
+                                        containerRef={containerRef}
+                                        radius={100}
+                                        falloff='linear'
+                                    />
+                                </Suspense>
                             </div>
                         </div>
 
                         <div className="flex items-center justify-center py-5 gap-6 mx-auto">
                             <a href='/'>
-                                <img src={telegram} alt='telegram' className='w-10 hover:-translate-y-2 duration-200'></img>
+                                <img loading="lazy" src={telegram} alt='telegram' className='w-10 hover:-translate-y-2 duration-200'></img>
                             </a>
                             <a href='/'>
-                                <img src={instagram} alt='telegram' className='w-10 hover:-translate-y-2 duration-200'></img>
+                                <img loading="lazy" src={instagram} alt='telegram' className='w-10 hover:-translate-y-2 duration-200'></img>
                             </a>
                             <a href='/'>
-                                <img src={x} alt='telegram' className='w-10 hover:-translate-y-2 duration-200'></img>
+                                <img loading="lazy" src={x} alt='telegram' className='w-10 hover:-translate-y-2 duration-200'></img>
                             </a>
                             <a href='/'>
-                                <img src={discord} alt='telegram' className='w-10 hover:-translate-y-2 duration-200'></img>
+                                <img loading="lazy" src={discord} alt='telegram' className='w-10 hover:-translate-y-2 duration-200'></img>
                             </a>
                         </div>
 
@@ -151,46 +156,47 @@ export default function Home() {
                         <p data-aos='fade-in' className='md:text-xl tracking-wide lg:leading-loose'>
                             FloCoin ($FLO) is a Solana-based utility token built for fast, frictionless digital value exchange. Whether it’s access to perks, payments between creators, or powering branded experiences — $FLO bridges Web3 flexibility with real-world outcomes.
                         </p>
-
-                        <Hyperspeed
-                            effectOptions={{
-                                onSpeedUp: () => { },
-                                onSlowDown: () => { },
-                                distortion: 'turbulentDistortion',
-                                length: 400,
-                                roadWidth: 10,
-                                islandWidth: 2,
-                                lanesPerRoad: 4,
-                                fov: 90,
-                                fovSpeedUp: 150,
-                                speedUp: 2,
-                                carLightsFade: 0.4,
-                                totalSideLightSticks: 20,
-                                lightPairsPerRoadWay: 40,
-                                shoulderLinesWidthPercentage: 0.05,
-                                brokenLinesWidthPercentage: 0.1,
-                                brokenLinesLengthPercentage: 0.5,
-                                lightStickWidth: [0.12, 0.5],
-                                lightStickHeight: [1.3, 1.7],
-                                movingAwaySpeed: [60, 80],
-                                movingCloserSpeed: [-120, -160],
-                                carLightsLength: [400 * 0.03, 400 * 0.2],
-                                carLightsRadius: [0.05, 0.14],
-                                carWidthPercentage: [0.3, 0.5],
-                                carShiftX: [-0.8, 0.8],
-                                carFloorSeparation: [0, 5],
-                                colors: {
-                                    roadColor: 0x080808,
-                                    islandColor: 0x0a0a0a,
-                                    background: 0x000000,
-                                    shoulderLines: 0xFFFFFF,
-                                    brokenLines: 0xFFFFFF,
-                                    leftCars: [0xD856BF, 0x6750A2, 0xC247AC],
-                                    rightCars: [0x03B3C3, 0x0E5EA5, 0x324555],
-                                    sticks: 0x03B3C3,
-                                }
-                            }}
-                        />
+                        <Suspense fallback={<div>Loading...</div>}>
+                            <Hyperspeed
+                                effectOptions={{
+                                    onSpeedUp: () => { },
+                                    onSlowDown: () => { },
+                                    distortion: 'turbulentDistortion',
+                                    length: 400,
+                                    roadWidth: 10,
+                                    islandWidth: 2,
+                                    lanesPerRoad: 4,
+                                    fov: 90,
+                                    fovSpeedUp: 150,
+                                    speedUp: 2,
+                                    carLightsFade: 0.4,
+                                    totalSideLightSticks: 20,
+                                    lightPairsPerRoadWay: 40,
+                                    shoulderLinesWidthPercentage: 0.05,
+                                    brokenLinesWidthPercentage: 0.1,
+                                    brokenLinesLengthPercentage: 0.5,
+                                    lightStickWidth: [0.12, 0.5],
+                                    lightStickHeight: [1.3, 1.7],
+                                    movingAwaySpeed: [60, 80],
+                                    movingCloserSpeed: [-120, -160],
+                                    carLightsLength: [400 * 0.03, 400 * 0.2],
+                                    carLightsRadius: [0.05, 0.14],
+                                    carWidthPercentage: [0.3, 0.5],
+                                    carShiftX: [-0.8, 0.8],
+                                    carFloorSeparation: [0, 5],
+                                    colors: {
+                                        roadColor: 0x080808,
+                                        islandColor: 0x0a0a0a,
+                                        background: 0x000000,
+                                        shoulderLines: 0xFFFFFF,
+                                        brokenLines: 0xFFFFFF,
+                                        leftCars: [0xD856BF, 0x6750A2, 0xC247AC],
+                                        rightCars: [0x03B3C3, 0x0E5EA5, 0x324555],
+                                        sticks: 0x03B3C3,
+                                    }
+                                }}
+                            />
+                        </Suspense>
                     </div>
                 </div>
             </section>
@@ -205,13 +211,14 @@ export default function Home() {
 
                         <Work />
                     </div>
-
-                    <CurvedLoop
-                        marqueeText="Smooth Curved Animation"
-                        speed={1}
-                        curveAmount={300}
-                        interactive={false}
-                    />
+                    <Suspense fallback={<div>Loading...</div>}>
+                        <CurvedLoop
+                            marqueeText="Smooth Curved Animation"
+                            speed={1}
+                            curveAmount={300}
+                            interactive={false}
+                        />
+                    </Suspense>
                 </div>
             </section>
 
@@ -267,7 +274,7 @@ export default function Home() {
 
                         <div className='flex lg:items-center items-start md:gap-6 gap-4 pt-5'>
                             <div>
-                                <img src={utility1} alt='' className='md:w-40 w-24'></img>
+                                <img loading="lazy" src={utility1} alt='' className='md:w-40 w-24'></img>
                             </div>
                             <div>
                                 <p className='md:text-6xl text-2xl font-black text-yellow-100 uppercase'>
@@ -281,7 +288,7 @@ export default function Home() {
 
                         <div className='flex lg:items-center items-start md:gap-6 gap-4'>
                             <div>
-                                <img src={utility2} alt='' className='md:w-40 w-16'></img>
+                                <img loading="lazy" src={utility2} alt='' className='md:w-40 w-16'></img>
                             </div>
                             <div>
                                 <p className='md:text-6xl text-2xl font-black text-yellow-100 uppercase'>
@@ -295,7 +302,7 @@ export default function Home() {
 
                         <div className='flex lg:items-center items-start md:gap-6 gap-4'>
                             <div>
-                                <img src={utility3} alt='' className='md:w-40 w-24'></img>
+                                <img loading="lazy" src={utility3} alt='' className='md:w-40 w-24'></img>
                             </div>
                             <div>
                                 <p className='md:text-6xl text-2xl font-black text-yellow-100 uppercase'>
@@ -309,7 +316,7 @@ export default function Home() {
 
                         <div className='flex lg:items-center items-start md:gap-6 gap-4'>
                             <div>
-                                <img src={utility4} alt='' className='md:w-40 w-24'></img>
+                                <img loading="lazy" src={utility4} alt='' className='md:w-40 w-24'></img>
                             </div>
                             <div>
                                 <p className='md:text-6xl text-2xl font-black text-yellow-100 uppercase'>
@@ -340,8 +347,8 @@ export default function Home() {
                         <p className='font-black uppercase'>Audited by CFG NINJA & SOLIDPROOF</p>
 
                         <div className='flex items-start md:gap-28 gap-12 lg:py-6'>
-                            <img data-aos='zoom-in' src={trust1} alt='trust' className='md:w-52 w-28'></img>
-                            <img data-aos='zoom-in' src={trust2} alt='trust' className='md:w-52 w-28'></img>
+                            <img loading="lazy" data-aos='zoom-in' src={trust1} alt='trust' className='md:w-52 w-28'></img>
+                            <img loading="lazy" data-aos='zoom-in' src={trust2} alt='trust' className='md:w-52 w-28'></img>
                         </div>
 
                         <p className='font-black uppercase text-white-50'>FloCoin is built with transparency, performance, and long-term trust in mind.</p>
@@ -367,7 +374,9 @@ export default function Home() {
                     </div>
 
                     <div style={{ height: '600px', position: 'relative' }}>
-                        <CircularGallery bend={3} textColor="#ffffff" borderRadius={0.05} scrollEase={0.02} />
+                        <Suspense fallback={<div>Loading...</div>}>
+                            <CircularGallery bend={3} textColor="#ffffff" borderRadius={0.05} scrollEase={0.02} />
+                        </Suspense>
                     </div>
                 </div>
             </section>
@@ -391,17 +400,19 @@ export default function Home() {
                         </div>
 
                         <div className='flex mx-auto'>
-                            <ProfileCard
-                                name="Javi A. Torres"
-                                title="Software Engineer"
-                                handle="javicodes"
-                                status="Online"
-                                contactText="Contact Me"
-                                avatarUrl="/path/to/avatar.jpg"
-                                showUserInfo={true}
-                                enableTilt={true}
-                                onContactClick={() => console.log('Contact clicked')}
-                            />
+                            <Suspense fallback={<div>Loading...</div>}>
+                                <ProfileCard
+                                    name="Javi A. Torres"
+                                    title="Software Engineer"
+                                    handle="javicodes"
+                                    status="Online"
+                                    contactText="Contact Me"
+                                    avatarUrl="/path/to/avatar.jpg"
+                                    showUserInfo={true}
+                                    enableTilt={true}
+                                    onContactClick={() => console.log('Contact clicked')}
+                                />
+                            </Suspense>
                         </div>
                     </div>
                 </div>
@@ -429,7 +440,7 @@ export default function Home() {
                             </div>
                         </div>
                         <div>
-                            <img src={coin} alt='coin' className='lg:block hidden'></img>
+                            <img loading="lazy" src={coin} alt='coin' className='lg:block hidden'></img>
                         </div>
                     </div>
                 </div>
@@ -453,16 +464,16 @@ export default function Home() {
 
                     <div className="flex items-center justify-center py-6 gap-6 mx-auto">
                         <a href='/'>
-                            <img src={telegram} alt='telegram' className='w-10 hover:-translate-y-2 duration-200'></img>
+                            <img loading="lazy" src={telegram} alt='telegram' className='w-10 hover:-translate-y-2 duration-200'></img>
                         </a>
                         <a href='/'>
-                            <img src={instagram} alt='telegram' className='w-10 hover:-translate-y-2 duration-200'></img>
+                            <img loading="lazy" src={instagram} alt='telegram' className='w-10 hover:-translate-y-2 duration-200'></img>
                         </a>
                         <a href='/'>
-                            <img src={x} alt='telegram' className='w-10 hover:-translate-y-2 duration-200'></img>
+                            <img loading="lazy" src={x} alt='telegram' className='w-10 hover:-translate-y-2 duration-200'></img>
                         </a>
                         <a href='/'>
-                            <img src={discord} alt='telegram' className='w-10 hover:-translate-y-2 duration-200'></img>
+                            <img loading="lazy" src={discord} alt='telegram' className='w-10 hover:-translate-y-2 duration-200'></img>
                         </a>
                     </div>
 
