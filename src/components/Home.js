@@ -18,6 +18,7 @@ import Faq from './Faq';
 import VariableProximity from './VariableProximity';
 import Threads from './Threads';
 import Roadmap from './Roadmap';
+import lilly from '../assets/lilly.jpg';
 const Hyperspeed = React.lazy(() => import('./Hyperspeed'));
 const ProfileCard = React.lazy(() => import('./ProfileCard'));
 const CircularGallery = React.lazy(() => import('./CircularGallery'));
@@ -376,7 +377,7 @@ export default function Home() {
 
                     <div style={{ height: '600px', position: 'relative' }}>
                         <Suspense fallback={<div>Loading...</div>}>
-                            <CircularGallery bend={3} textColor="#ffffff" borderRadius={0.05} scrollEase={0.02} />
+                            <CircularGallery bend={3} borderRadius={0.05} scrollEase={0.02} />
                         </Suspense>
                     </div>
                 </div>
@@ -403,12 +404,12 @@ export default function Home() {
                         <div className='flex mx-auto'>
                             <Suspense fallback={<div>Loading...</div>}>
                                 <ProfileCard
-                                    name="Javi A. Torres"
+                                    name="Lilly"
                                     title="Software Engineer"
-                                    handle="javicodes"
+                                    handle="lillycodes"
                                     status="Online"
                                     contactText="Contact Me"
-                                    avatarUrl="/path/to/avatar.jpg"
+                                    avatarUrl={lilly}
                                     showUserInfo={true}
                                     enableTilt={true}
                                     onContactClick={() => console.log('Contact clicked')}

@@ -133,7 +133,6 @@ class Media {
     this.font = font;
     this.createShader();
     this.createMesh();
-    this.createTitle();
     this.onResize();
   }
   createShader() {
@@ -333,12 +332,12 @@ class App {
   }
   createMedias({ items = [], bend = 1, textColor, borderRadius, font }) {
     const defaultItems = [
-      { image: gallery1, text: "Bridge" },
-      { image: gallery2, text: "Desk Setup" },
-      { image: gallery3, text: "Waterfall" },
-      { image: gallery4, text: "Strawberries" },
-      { image: gallery5, text: "Deep Diving" },
-      { image: gallery6, text: "Train Track" },
+      { image: gallery1},
+      { image: gallery2},
+      { image: gallery3},
+      { image: gallery4},
+      { image: gallery5},
+      { image: gallery6},
     ];
     const galleryItems = items && items.length ? items : defaultItems;
     this.mediasImages = galleryItems;
