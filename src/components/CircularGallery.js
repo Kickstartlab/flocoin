@@ -1,5 +1,13 @@
 import { Camera, Mesh, Plane, Program, Renderer, Texture, Transform } from "ogl";
 import { useEffect, useRef } from "react";
+import gallery1 from '../assets/gallery1.jpg';
+import gallery2 from '../assets/gallery2.jpg';
+import gallery3 from '../assets/gallery3.jpg';
+import gallery4 from '../assets/gallery4.jpg';
+import gallery5 from '../assets/gallery5.jpg';
+import gallery6 from '../assets/gallery6.jpg';
+
+
 
 function debounce(func, wait) {
   let timeout;
@@ -145,7 +153,7 @@ class Media {
         void main() {
           vUv = uv;
           vec3 p = position;
-          p.z = (sin(p.x * 4.0 + uTime) * 1.5 + cos(p.y * 2.0 + uTime) * 1.5) * (0.1 + uSpeed * 0.5);
+          p.z = (sin(p.x * 2.0 + uTime) + cos(p.y + uTime)) * 0.05;
           gl_Position = projectionMatrix * modelViewMatrix * vec4(p, 1.0);
         }
       `,
@@ -299,7 +307,7 @@ class App {
     this.createScene();
     this.onResize();
     this.createGeometry();
-    this.createMedias(items, bend, textColor, borderRadius, font);
+    this.createMedias({ items, bend, textColor, borderRadius, font });
     this.update();
     this.addEventListeners();
   }
@@ -323,23 +331,17 @@ class App {
       widthSegments: 100,
     });
   }
-  createMedias(items, bend = 1, textColor, borderRadius, font) {
+  createMedias({ items = [], bend = 1, textColor, borderRadius, font }) {
     const defaultItems = [
-      { image: `https://picsum.photos/seed/1/800/600?grayscale`, text: "Bridge" },
-      { image: `https://picsum.photos/seed/2/800/600?grayscale`, text: "Desk Setup" },
-      { image: `https://picsum.photos/seed/3/800/600?grayscale`, text: "Waterfall" },
-      { image: `https://picsum.photos/seed/4/800/600?grayscale`, text: "Strawberries" },
-      { image: `https://picsum.photos/seed/5/800/600?grayscale`, text: "Deep Diving" },
-      { image: `https://picsum.photos/seed/16/800/600?grayscale`, text: "Train Track" },
-      { image: `https://picsum.photos/seed/17/800/600?grayscale`, text: "Santorini" },
-      { image: `https://picsum.photos/seed/8/800/600?grayscale`, text: "Blurry Lights" },
-      { image: `https://picsum.photos/seed/9/800/600?grayscale`, text: "New York" },
-      { image: `https://picsum.photos/seed/10/800/600?grayscale`, text: "Good Boy" },
-      { image: `https://picsum.photos/seed/21/800/600?grayscale`, text: "Coastline" },
-      { image: `https://picsum.photos/seed/12/800/600?grayscale`, text: "Palm Trees" },
+      { image: gallery1, text: "Bridge" },
+      { image: gallery2, text: "Desk Setup" },
+      { image: gallery3, text: "Waterfall" },
+      { image: gallery4, text: "Strawberries" },
+      { image: gallery5, text: "Deep Diving" },
+      { image: gallery6, text: "Train Track" },
     ];
     const galleryItems = items && items.length ? items : defaultItems;
-    this.mediasImages = galleryItems.concat(galleryItems);
+    this.mediasImages = galleryItems;
     this.medias = this.mediasImages.map((data, index) => {
       return new Media({
         geometry: this.planeGeometry,

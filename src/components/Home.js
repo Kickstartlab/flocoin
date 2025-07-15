@@ -17,6 +17,7 @@ import Work from './Work';
 import Faq from './Faq';
 import VariableProximity from './VariableProximity';
 import Threads from './Threads';
+import Roadmap from './Roadmap';
 const Hyperspeed = React.lazy(() => import('./Hyperspeed'));
 const ProfileCard = React.lazy(() => import('./ProfileCard'));
 const CircularGallery = React.lazy(() => import('./CircularGallery'));
@@ -213,7 +214,7 @@ export default function Home() {
                     </div>
                     <Suspense fallback={<div>Loading...</div>}>
                         <CurvedLoop
-                            marqueeText="Smooth Curved Animation"
+                            marqueeText="Powering the Digital Transaction layer"
                             speed={1}
                             curveAmount={300}
                             interactive={false}
@@ -442,6 +443,20 @@ export default function Home() {
                         <div>
                             <img loading="lazy" src={coin} alt='coin' className='lg:block hidden'></img>
                         </div>
+                    </div>
+                </div>
+            </section>
+
+            {/* roadmap section */}
+
+
+            <section id='tokenomics' className="lg:px-20 px-5 lg:pb-20 py-6">
+                <div className='container mx-auto'>
+
+                    <p data-aos='fade-up' className='md:text-5xl text-3xl font-black md:mb-12 mb-6'>Roadmap</p>
+
+                    <div>
+                        <Roadmap />
                     </div>
                 </div>
             </section>

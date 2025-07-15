@@ -20,6 +20,12 @@ module.exports = {
       },
       slate: {
         "400": "#94A3B8",
+      },
+      green: {
+        "400": "#00C897",
+      },
+      gray: {
+        "600": "#373D41",
       }
     },
     fontFamily: {
