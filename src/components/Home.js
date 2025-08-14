@@ -363,8 +363,12 @@ export default function Home() {
                         <p className='font-black uppercase'>Audited by CFG NINJA & SOLIDPROOF</p>
 
                         <div className='flex items-start md:gap-28 gap-12 lg:py-6'>
-                            <img loading="lazy" data-aos='zoom-in' src={trust1} alt='trust' className='md:w-52 w-28'></img>
-                            <img loading="lazy" data-aos='zoom-in' src={trust2} alt='trust' className='md:w-52 w-28'></img>
+                            <a href='https://app.solidproof.io/projects/flo-coin-global'>
+                                <img loading="lazy" data-aos='zoom-in' src={trust1} alt='trust' className='md:w-52 w-28'></img>
+                            </a>
+                            <a href='https://audit.cfg.ninja/flo-coin-global'>
+                                <img loading="lazy" data-aos='zoom-in' src={trust2} alt='trust' className='md:w-52 w-28'></img>
+                            </a>
                         </div>
 
                         <div className='absolute w-screen h-screen mt-20 flex mx-auto -ml-24'>
@@ -487,21 +491,21 @@ export default function Home() {
                     <p data-aos='fade-up' className='md:text-5xl text-3xl font-black md:mb-12 mb-6'>Partners</p>
 
                     <div className='grid grid-cols-2 items-center justify-center pt-8 gap-6'>
-                        <div>
+                        <a href='https://www.dtcgroup.io/'>
                             <img src={partner1} alt='partners' className='lg:w-1/2 w-36'></img>
-                        </div>
+                        </a>
 
-                        <div>
+                        <a href='https://x.com/ctd_events'>
                             <img src={partner2} alt='partners' className='lg:w-1/4 w-24'></img>
-                        </div>
+                        </a>
 
-                        <div>
+                        <a href='https://www.arcadiamarketing.io/'>
                             <img src={partner3} alt='partners' className='lg:w-1/2 w-36'></img>
-                        </div>
+                        </a>
 
-                        <div>
+                        <a href='https://solus.agency/'>
                             <img src={partner4} alt='partners' className='lg:w-1/4 w-24'></img>
-                        </div>
+                        </a>
                     </div>
                 </div>
             </section>
