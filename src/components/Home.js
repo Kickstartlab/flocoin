@@ -367,8 +367,8 @@ export default function Home() {
                             <img loading="lazy" data-aos='zoom-in' src={trust2} alt='trust' className='md:w-52 w-28'></img>
                         </div>
 
-                        <div className='absolute w-screen h-screen mt-20 flex mx-auto -ml-20'>
-                            <Grid spacing={130} /> {/* spacing controls grid size */}
+                        <div className='absolute w-screen h-screen mt-20 flex mx-auto -ml-24'>
+                            <Grid spacing={130} />
                         </div>
 
                         <p className='font-black uppercase text-white-50'>FloCoin is built with transparency, performance, and long-term trust in mind.</p>
@@ -486,21 +486,21 @@ export default function Home() {
 
                     <p data-aos='fade-up' className='md:text-5xl text-3xl font-black md:mb-12 mb-6'>Partners</p>
 
-                    <div className='grid grid-cols-2 items-start pt-8'>
+                    <div className='grid grid-cols-2 items-center justify-center pt-8 gap-6'>
                         <div>
-                            <img src={partner1} alt='partners' className='w-1/2'></img>
+                            <img src={partner1} alt='partners' className='lg:w-1/2 w-36'></img>
                         </div>
 
                         <div>
-                            <img src={partner2} alt='partners' className='w-1/3'></img>
+                            <img src={partner2} alt='partners' className='lg:w-1/4 w-24'></img>
                         </div>
 
                         <div>
-                            <img src={partner3} alt='partners' className='w-1/2'></img>
+                            <img src={partner3} alt='partners' className='lg:w-1/2 w-36'></img>
                         </div>
 
                         <div>
-                            <img src={partner4} alt='partners' className='w-1/3'></img>
+                            <img src={partner4} alt='partners' className='lg:w-1/4 w-24'></img>
                         </div>
                     </div>
                 </div>
