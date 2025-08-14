@@ -646,3 +646,95 @@ canvas {
   width: 100%;
   height: 100%;
 }
+
+
+
+
+
+
+
+
+
+.lines {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+}
+
+/* Vertical lines */
+.vline {
+  position: absolute;
+  width: 1px;
+  height: 100%;
+  background: rgba(255, 255, 255, 0.1);
+  overflow: hidden;
+}
+
+.vline::after {
+  content: '';
+  display: block;
+  position: absolute;
+  height: 15vh;
+  width: 100%;
+  top: -50%;
+  left: 0;
+  background: linear-gradient(
+    to bottom,
+    rgba(255, 255, 255, 0) 0%,
+    #ffef5f 75%,
+    #ffef5f 100%
+  );
+  animation: drop var(--duration, 7s) infinite;
+  animation-delay: var(--delay, 0s);
+  animation-timing-function: cubic-bezier(0.4, 0.26, 0, 0.97);
+}
+
+/* Horizontal lines */
+.hline {
+  position: absolute;
+  height: 1px;
+  width: 100%;
+  background: rgba(255, 255, 255, 0.1);
+  overflow: hidden;
+}
+
+.hline::after {
+  content: '';
+  display: block;
+  position: absolute;
+  width: 15vw;
+  height: 100%;
+  left: -50%;
+  top: 0;
+  background: linear-gradient(
+    to right,
+    rgba(255, 255, 255, 0) 0%,
+    #ffef5f 75%,
+    #ffef5f 100%
+  );
+  animation: slide var(--duration, 7s) infinite;
+  animation-delay: var(--delay, 0s);
+  animation-timing-function: cubic-bezier(0.4, 0.26, 0, 0.97);
+}
+
+/* Animations */
+@keyframes drop {
+  0% {
+    top: -50%;
+  }
+  100% {
+    top: 110%;
+  }
+}
+
+@keyframes slide {
+  0% {
+    left: -50%;
+  }
+  100% {
+    left: 110%;
+  }
+}

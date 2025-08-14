@@ -15,10 +15,18 @@ import AOS from 'aos';
 import 'aos/dist/aos.css';
 import Work from './Work';
 import Faq from './Faq';
-import VariableProximity from './VariableProximity';
+import Grid from './Grid';
+
+// import VariableProximity from './VariableProximity';
 import Threads from './Threads';
 import Roadmap from './Roadmap';
 import lilly from '../assets/lilly.jpg';
+import video from '../assets/video.png';
+import partner1 from '../assets/partner1.png';
+import partner2 from '../assets/partner2.png';
+import partner3 from '../assets/partner3.png';
+import partner4 from '../assets/partner4.png';
+
 const Hyperspeed = React.lazy(() => import('./Hyperspeed'));
 const ProfileCard = React.lazy(() => import('./ProfileCard'));
 const CircularGallery = React.lazy(() => import('./CircularGallery'));
@@ -62,7 +70,7 @@ export default function Home() {
     return (
         <div className="bg-black-100 font-mulish overflow-hidden text-white-100">
 
-            <div className='w-full absolute left-0 right-0 h-[500px] lg:top-1/2 top-1/3 lg:mt-8'>
+            <div className='w-full absolute left-0 right-0 h-[500px] lg:top-1/2 top-1/3 lg:mt-12'>
                 <Suspense fallback={<div>Loading...</div>}>
                     <Threads
                         amplitude={1}
@@ -76,8 +84,8 @@ export default function Home() {
                 <div className='container mx-auto'>
 
                     <Menu />
-                    <div className="flex flex-col justify-center items-center gap-y-6 lg:pt-28 pt-12 text-center mx-auto">
-                        <div data-aos='fade-up' className='space-y-5'>
+                    <div className="flex flex-col justify-center items-center gap-y-6 pt-12 text-center mx-auto">
+                        {/* <div data-aos='fade-up' className='space-y-5'>
                             <div
                                 ref={containerRef}
                                 style={{ position: 'relative' }}
@@ -111,24 +119,11 @@ export default function Home() {
                                     />
                                 </Suspense>
                             </div>
-                        </div>
+                        </div> */}
 
-                        <div className="flex items-center justify-center py-5 gap-6 mx-auto">
-                            <a href='/'>
-                                <img loading="lazy" src={telegram} alt='telegram' className='w-10 hover:-translate-y-2 duration-200'></img>
-                            </a>
-                            <a href='/'>
-                                <img loading="lazy" src={instagram} alt='telegram' className='w-10 hover:-translate-y-2 duration-200'></img>
-                            </a>
-                            <a href='/'>
-                                <img loading="lazy" src={x} alt='telegram' className='w-10 hover:-translate-y-2 duration-200'></img>
-                            </a>
-                            <a href='/'>
-                                <img loading="lazy" src={discord} alt='telegram' className='w-10 hover:-translate-y-2 duration-200'></img>
-                            </a>
-                        </div>
+                        <img src={video} alt='video' className='lg:w-7/12 flex mx-auto'></img>
 
-                        <div className="flex items-center justify-center md:gap-8 gap-3 mx-auto ">
+                        <div className="flex items-center justify-center md:gap-6 gap-3 mx-auto mt-6">
                             <a data-aos='fade-left' href="/">
                                 <button className="rounded-full py-3 font-extrabold px-5 bg-yellow-100 text-black-100 uppercase">
                                     Launch APP
@@ -141,6 +136,25 @@ export default function Home() {
                                 </button>
                             </a>
                         </div>
+
+                        <a href='/' className='font-bold underline py-2'>Explore Ecosystem</a>
+
+                        <div className="flex items-center justify-center pb-5 gap-6 mx-auto">
+                            <a href='/'>
+                                <img loading="lazy" src={telegram} alt='telegram' className='w-10'></img>
+                            </a>
+                            <a href='/'>
+                                <img loading="lazy" src={instagram} alt='telegram' className='w-10'></img>
+                            </a>
+                            <a href='/'>
+                                <img loading="lazy" src={x} alt='telegram' className='w-10'></img>
+                            </a>
+                            <a href='/'>
+                                <img loading="lazy" src={discord} alt='telegram' className='w-10'></img>
+                            </a>
+                        </div>
+
+
                     </div>
                 </div>
             </section>
@@ -336,7 +350,7 @@ export default function Home() {
 
             {/* Trust & Security */}
 
-            <section id='use' className="lg:px-20 px-5 lg:py-20 py-6">
+            <section id='use' className="lg:px-20 px-5 lg:py-20 py-6 relative z-20">
                 <div className='container mx-auto'>
 
                     <div className='space-y-8'>
@@ -351,6 +365,10 @@ export default function Home() {
                         <div className='flex items-start md:gap-28 gap-12 lg:py-6'>
                             <img loading="lazy" data-aos='zoom-in' src={trust1} alt='trust' className='md:w-52 w-28'></img>
                             <img loading="lazy" data-aos='zoom-in' src={trust2} alt='trust' className='md:w-52 w-28'></img>
+                        </div>
+
+                        <div className='absolute w-screen h-screen mt-20 flex mx-auto -ml-20'>
+                            <Grid spacing={130} /> {/* spacing controls grid size */}
                         </div>
 
                         <p className='font-black uppercase text-white-50'>FloCoin is built with transparency, performance, and long-term trust in mind.</p>
@@ -450,14 +468,40 @@ export default function Home() {
 
             {/* roadmap section */}
 
-
-            <section id='tokenomics' className="lg:px-20 px-5 lg:pb-20 py-6">
+            <section id='roadmap' className="lg:px-20 px-5 lg:pb-20 py-6">
                 <div className='container mx-auto'>
 
                     <p data-aos='fade-up' className='md:text-5xl text-3xl font-black md:mb-12 mb-6'>Roadmap</p>
 
                     <div>
                         <Roadmap />
+                    </div>
+                </div>
+            </section>
+
+            {/* partner section */}
+
+            <section id='partner' className="lg:px-20 px-5 lg:pb-20 py-6">
+                <div className='container mx-auto'>
+
+                    <p data-aos='fade-up' className='md:text-5xl text-3xl font-black md:mb-12 mb-6'>Partners</p>
+
+                    <div className='grid grid-cols-2 items-start pt-8'>
+                        <div>
+                            <img src={partner1} alt='partners' className='w-1/2'></img>
+                        </div>
+
+                        <div>
+                            <img src={partner2} alt='partners' className='w-1/3'></img>
+                        </div>
+
+                        <div>
+                            <img src={partner3} alt='partners' className='w-1/2'></img>
+                        </div>
+
+                        <div>
+                            <img src={partner4} alt='partners' className='w-1/3'></img>
+                        </div>
                     </div>
                 </div>
             </section>
