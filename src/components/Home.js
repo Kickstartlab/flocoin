@@ -26,6 +26,11 @@ import partner1 from '../assets/partner1.png';
 import partner2 from '../assets/partner2.png';
 import partner3 from '../assets/partner3.png';
 import partner4 from '../assets/partner4.png';
+import team1 from '../assets/1.jpeg';
+import team2 from '../assets/2.jpeg';
+import team3 from '../assets/3.jpeg';
+import Tilt from 'react-parallax-tilt';
+
 
 const Hyperspeed = React.lazy(() => import('./Hyperspeed'));
 const ProfileCard = React.lazy(() => import('./ProfileCard'));
@@ -371,7 +376,7 @@ export default function Home() {
                             </a>
                         </div>
 
-                        <div className='absolute w-screen h-screen mt-20 flex mx-auto -ml-24'>
+                        <div className='absolute w-screen h-screen mt-20 flex mx-auto lg:-ml-24'>
                             <Grid spacing={130} />
                         </div>
 
@@ -421,22 +426,20 @@ export default function Home() {
                             <p data-aos='fade-in'>
                                 Lilly leads FloCoin’s communications, partnerships, and public image. As one of the project’s public faces, she connects $FLO with audiences across both the Web3 world and real-world activations.
                             </p>
+
+                            <div className='flex items-center gap-3'>
+                                <img src={team1} alt='team' className='lg:w-44 w-28 lg:h-64 h-56 object-cover'></img>
+                                <img src={team2} alt='team' className='lg:w-44 w-28 lg:h-64 h-56 object-cover'></img>
+                                <img src={team3} alt='team' className='lg:w-44 w-28 lg:h-64 h-56 object-cover'></img>
+                            </div>
                         </div>
 
                         <div className='flex mx-auto'>
-                            <Suspense fallback={<div>Loading...</div>}>
-                                <ProfileCard
-                                    name="Lilly"
-                                    title="Software Engineer"
-                                    handle="lillycodes"
-                                    status="Online"
-                                    contactText="Contact Me"
-                                    avatarUrl={lilly}
-                                    showUserInfo={true}
-                                    enableTilt={true}
-                                    onContactClick={() => console.log('Contact clicked')}
-                                />
-                            </Suspense>
+                            <Tilt>
+                                <div className='bg-img h-[500px] w-96 rounded-3xl grayscale hover:grayscale-0 transition duration-300 hover:border-2 hover:border-yellow-100'>
+                                    <p className='text-2xl py-2 text-center font-bold bg-black-100 bg-opacity-60 translate-y-9 w-full'>Lilly</p>
+                                </div>
+                            </Tilt>
                         </div>
                     </div>
                 </div>

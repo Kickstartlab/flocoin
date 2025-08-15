@@ -738,3 +738,9 @@ canvas {
     left: 110%;
   }
 }
+
+.bg-img{
+  background-image: url(./assets/lilly.jpg);
+  background-position: center;
+  background-size: cover;
+}
