@@ -16,12 +16,9 @@ import 'aos/dist/aos.css';
 import Work from './Work';
 import Faq from './Faq';
 import Grid from './Grid';
-
 // import VariableProximity from './VariableProximity';
 import Threads from './Threads';
 import Roadmap from './Roadmap';
-import lilly from '../assets/lilly.jpg';
-import video from '../assets/video.png';
 import partner1 from '../assets/partner1.png';
 import partner2 from '../assets/partner2.png';
 import partner3 from '../assets/partner3.png';
@@ -30,19 +27,14 @@ import team1 from '../assets/1.jpeg';
 import team2 from '../assets/2.jpeg';
 import team3 from '../assets/3.jpeg';
 import Tilt from 'react-parallax-tilt';
-
-
+import video from "../assets/video.mp4";
 const Hyperspeed = React.lazy(() => import('./Hyperspeed'));
-const ProfileCard = React.lazy(() => import('./ProfileCard'));
 const CircularGallery = React.lazy(() => import('./CircularGallery'));
 const CurvedLoop = React.lazy(() => import('./CurvedLoop'));
 
 
-
 export default function Home() {
-
     const containerRef = useRef(null);
-
     useEffect(() => {
         AOS.init({
             duration: 600,
@@ -75,7 +67,7 @@ export default function Home() {
     return (
         <div className="bg-black-100 font-mulish overflow-hidden text-white-100">
 
-            <div className='w-full absolute left-0 right-0 h-[500px] lg:top-1/2 top-1/3 lg:mt-12'>
+            <div className='w-full absolute left-0 right-0 h-[500px] lg:top-1/2 top-1/3 lg:mt-12 lg:block hidden'>
                 <Suspense fallback={<div>Loading...</div>}>
                     <Threads
                         amplitude={1}
@@ -89,76 +81,56 @@ export default function Home() {
                 <div className='container mx-auto'>
 
                     <Menu />
-                    <div className="flex flex-col justify-center items-center gap-y-6 pt-12 text-center mx-auto">
-                        {/* <div data-aos='fade-up' className='space-y-5'>
-                            <div
-                                ref={containerRef}
-                                style={{ position: 'relative' }}
-                            >
-                                <Suspense fallback={<div>Loading...</div>}>
-                                    <VariableProximity
-                                        label={'Powering the Digital Transaction Layer'}
-                                        className={'variable-proximity-demo lg:text-[3.5rem] text-3xl font-darker uppercase'}
-                                        fromFontVariationSettings="'wght' 500, 'opsz' 9"
-                                        toFontVariationSettings="'wght' 1000, 'opsz' 40"
-                                        containerRef={containerRef}
-                                        radius={100}
-                                        falloff='linear'
-                                    />
-                                </Suspense>
+                    <div className="lg:flex justify-center items-end lg:pt-6 pt-8 text-center mx-auto lg:space-y-0 space-y-6">
+
+                        <div className='space-y-6 lg:w-4/12 lg:-translate-y-12'>
+                            <div className="flex justify-center gap-5 items-center mx-auto">
+                                <a data-aos='fade-left' href="/">
+                                    <button className="rounded-full py-3 font-extrabold px-5 bg-yellow-100 text-black-100 uppercase">
+                                        Launch APP
+                                    </button>
+                                </a>
+
+                                <a data-aos='fade-right' href="/">
+                                    <button className="rounded-full py-3 font-extrabold px-5 bg-yellow-100 text-black-100 uppercase">
+                                        Whitepaper
+                                    </button>
+                                </a>
                             </div>
-                            <div
-                                ref={containerRef}
-                                style={{ position: 'relative' }}
-
-                            >
-                                <Suspense fallback={<div>Loading...</div>}>
-                                    <VariableProximity
-                                        label={'The future is digital So is $FLO'}
-                                        className={'variable-proximity-demo lg:text-[3.5rem] text-3xl font-darker uppercase'}
-                                        fromFontVariationSettings="'wght' 500, 'opsz' 9"
-                                        toFontVariationSettings="'wght' 1000, 'opsz' 40"
-                                        containerRef={containerRef}
-                                        radius={100}
-                                        falloff='linear'
-                                    />
-                                </Suspense>
+                            <div className="flex items-center justify-center pb-5 gap-6 mx-auto">
+                                <a href='/'>
+                                    <img loading="lazy" src={telegram} alt='telegram' className='w-10'></img>
+                                </a>
+                                <a href='/'>
+                                    <img loading="lazy" src={instagram} alt='telegram' className='w-10'></img>
+                                </a>
+                                <a href='/'>
+                                    <img loading="lazy" src={x} alt='telegram' className='w-10'></img>
+                                </a>
+                                <a href='/'>
+                                    <img loading="lazy" src={discord} alt='telegram' className='w-10'></img>
+                                </a>
                             </div>
-                        </div> */}
-
-                        <img src={video} alt='video' className='lg:w-7/12 flex mx-auto'></img>
-
-                        <div className="flex items-center justify-center md:gap-6 gap-3 mx-auto mt-6">
-                            <a data-aos='fade-left' href="/">
-                                <button className="rounded-full py-3 font-extrabold px-5 bg-yellow-100 text-black-100 uppercase">
-                                    Launch APP
-                                </button>
-                            </a>
-
-                            <a data-aos='fade-right' href="/">
-                                <button className="rounded-full py-3 font-extrabold px-5 bg-yellow-100 text-black-100 uppercase">
-                                    Whitepaper
-                                </button>
-                            </a>
                         </div>
 
-                        <a href='/' className='font-bold underline py-2'>Explore Ecosystem</a>
-
-                        <div className="flex items-center justify-center pb-5 gap-6 mx-auto">
-                            <a href='/'>
-                                <img loading="lazy" src={telegram} alt='telegram' className='w-10'></img>
-                            </a>
-                            <a href='/'>
-                                <img loading="lazy" src={instagram} alt='telegram' className='w-10'></img>
-                            </a>
-                            <a href='/'>
-                                <img loading="lazy" src={x} alt='telegram' className='w-10'></img>
-                            </a>
-                            <a href='/'>
-                                <img loading="lazy" src={discord} alt='telegram' className='w-10'></img>
-                            </a>
+                        <div className='lg:w-4/12'>
+                            <video
+                                src={video}
+                                // controls
+                                autoPlay
+                                muted
+                                loop
+                                className='h-[530px] flex mx-auto rounded-md border border-yellow-100 mb-5'
+                            />
+                            <a href='/' className='font-bold underline'>Explore Ecosystem</a>
                         </div>
 
+                        <div data-aos='fade-up' className='space-y-5 lg:w-4/12'>
+                            <h1 className='lg:text-5xl text-2xl font-darker font-bold uppercase lg:-translate-y-12'>
+                                Powering the Digital Transaction Layer The future is digital So is <br></br>
+                                <span className='text-yellow-100 font-bilbo'>$FLO</span>
+                            </h1>
+                        </div>
 
                     </div>
                 </div>

@@ -16,7 +16,7 @@ module.exports = {
         "100": "#3A6DF0",
       },
       yellow: {
-        "100": "#FFEF5F",
+        "100": "#F0B806",
       },
       slate: {
         "400": "#94A3B8",
