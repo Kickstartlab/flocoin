@@ -17,9 +17,9 @@ export default function Menu() {
     <header>
 
       <div className="lg:flex hidden items-center justify-between font-mulish h-28">
-        <a href="/" className="flex items-center gap-x-3">
+        <a href="/" className="flex items-center gap-x-2">
           <img src={logo} alt='logo' className='w-16'></img>
-          <h1 className='text-3xl font-bold text-yellow-100 font-bilbo'>
+          <h1 className='text-xl font-bold text-yellow-100 font-draker uppercase'>
             Flo Coin Global
           </h1>
         </a>
@@ -42,8 +42,8 @@ export default function Menu() {
 
       <div className="lg:hidden flex items-center justify-between py-6">
         <a href="/" className="flex items-center gap-x-2">
-          <img src={logo} alt='logo' className='w-12'></img>
-          <h1 className='text-2xl font-bold text-yellow-100 font-bilbo'>
+          <img src={logo} alt='logo' className='w-10'></img>
+          <h1 className='text-md font-bold text-yellow-100 font-draker uppercase'>
            Flo Coin Global
           </h1>
         </a>
