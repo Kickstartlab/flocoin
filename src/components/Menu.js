@@ -17,7 +17,9 @@ export default function Menu() {
 
       <div className="lg:flex hidden items-center justify-between font-mulish h-28">
         <a href="/" className="">
-          <img src={logo} alt="Logo" className='w-20' />
+          <h1 className='text-3xl font-bold text-yellow-100 font-bilbo'>
+           FLOCOIN
+          </h1>
         </a>
 
         <nav>
@@ -38,7 +40,9 @@ export default function Menu() {
 
       <div className="lg:hidden flex items-center justify-between py-6">
         <a href="/" className="">
-          <img src={logo} alt="Logo" className='w-14' />
+           <h2 className='text-2xl font-bold text-yellow-100 font-bilbo'>
+           FLOCOIN
+          </h2>
         </a>
 
         <button onClick={ToggleSidebar} className="nav cursor-pointer">

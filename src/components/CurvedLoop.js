@@ -8,9 +8,9 @@ import {
 
 const CurvedLoop = ({
     marqueeText = "",
-    speed = 2,
+    speed = 4,
     className,
-    curveAmount = 400,
+    curveAmount = 300,
     direction = "left",
     interactive = true,
 }) => {

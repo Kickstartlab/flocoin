@@ -86,29 +86,29 @@ export default function Home() {
                         <div className='space-y-6 lg:w-4/12 lg:-translate-y-12'>
                             <div className="flex justify-center gap-5 items-center mx-auto">
                                 <a data-aos='fade-left' href="/">
-                                    <button className="rounded-full py-3 font-extrabold px-5 bg-yellow-100 text-black-100 uppercase">
+                                    <button className="rounded-full md:py-3 py-2 md:font-extrabold font-bold md:px-5 px-4 bg-yellow-100 text-black-100 uppercase">
                                         Launch APP
                                     </button>
                                 </a>
 
                                 <a data-aos='fade-right' href="/">
-                                    <button className="rounded-full py-3 font-extrabold px-5 bg-yellow-100 text-black-100 uppercase">
+                                    <button className="rounded-full md:py-3 py-2 md:font-extrabold font-bold md:px-5 px-4 bg-yellow-100 text-black-100 uppercase">
                                         Whitepaper
                                     </button>
                                 </a>
                             </div>
-                            <div className="flex items-center justify-center pb-5 gap-6 mx-auto">
+                            <div className="flex items-center justify-center pb-5 md:gap-6 gap-4 mx-auto">
                                 <a href='/'>
-                                    <img loading="lazy" src={telegram} alt='telegram' className='w-10'></img>
+                                    <img loading="lazy" src={telegram} alt='telegram' className='md:w-10 w-8'></img>
                                 </a>
                                 <a href='/'>
-                                    <img loading="lazy" src={instagram} alt='telegram' className='w-10'></img>
+                                    <img loading="lazy" src={instagram} alt='telegram' className='md:w-10 w-8'></img>
                                 </a>
                                 <a href='/'>
-                                    <img loading="lazy" src={x} alt='telegram' className='w-10'></img>
+                                    <img loading="lazy" src={x} alt='telegram' className='md:w-10 w-8'></img>
                                 </a>
                                 <a href='/'>
-                                    <img loading="lazy" src={discord} alt='telegram' className='w-10'></img>
+                                    <img loading="lazy" src={discord} alt='telegram' className='md:w-10 w-8'></img>
                                 </a>
                             </div>
                         </div>
@@ -120,7 +120,7 @@ export default function Home() {
                                 autoPlay
                                 muted
                                 loop
-                                className='h-[530px] flex mx-auto rounded-md border border-yellow-100 mb-5'
+                                className='h-[520px] flex mx-auto rounded-md border border-yellow-100 mb-5'
                             />
                             <a href='/' className='font-bold underline'>Explore Ecosystem</a>
                         </div>
@@ -399,16 +399,16 @@ export default function Home() {
                                 Lilly leads FloCoin’s communications, partnerships, and public image. As one of the project’s public faces, she connects $FLO with audiences across both the Web3 world and real-world activations.
                             </p>
 
-                            <div className='flex items-center gap-3'>
-                                <img src={team1} alt='team' className='lg:w-44 w-28 lg:h-64 h-56 object-cover'></img>
-                                <img src={team2} alt='team' className='lg:w-44 w-28 lg:h-64 h-56 object-cover'></img>
-                                <img src={team3} alt='team' className='lg:w-44 w-28 lg:h-64 h-56 object-cover'></img>
+                            <div className='flex items-center md:justify-start justify-between gap-3'>
+                                <img src={team1} alt='team' className='lg:w-44 w-24 lg:h-64 h-56 object-cover'></img>
+                                <img src={team2} alt='team' className='lg:w-44 w-24 lg:h-64 h-56 object-cover'></img>
+                                <img src={team3} alt='team' className='lg:w-44 w-24 lg:h-64 h-56 object-cover'></img>
                             </div>
                         </div>
 
                         <div className='flex mx-auto'>
                             <Tilt>
-                                <div className='bg-img h-[500px] w-96 rounded-3xl grayscale hover:grayscale-0 transition duration-300 hover:border-2 hover:border-yellow-100'>
+                                <div className='bg-img h-[500px] md:w-96 w-80 rounded-3xl grayscale hover:grayscale-0 transition duration-300 hover:border-2 hover:border-yellow-100'>
                                     <p className='text-2xl py-2 text-center font-bold bg-black-100 bg-opacity-60 translate-y-9 w-full'>Lilly</p>
                                 </div>
                             </Tilt>
