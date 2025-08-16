@@ -1,4 +1,7 @@
 import React, { useState } from 'react'
+import logo from '../assets/logo.png';
+
+
 export default function Menu() {
 
   const [isOpen, setIsopen] = useState(false);
@@ -14,9 +17,10 @@ export default function Menu() {
     <header>
 
       <div className="lg:flex hidden items-center justify-between font-mulish h-28">
-        <a href="/" className="">
+        <a href="/" className="flex items-center gap-x-3">
+          <img src={logo} alt='logo' className='w-16'></img>
           <h1 className='text-3xl font-bold text-yellow-100 font-bilbo'>
-           FLOCOIN
+            Flo Coin Global
           </h1>
         </a>
 
@@ -37,10 +41,11 @@ export default function Menu() {
       </div>
 
       <div className="lg:hidden flex items-center justify-between py-6">
-        <a href="/" className="">
-           <h2 className='text-2xl font-bold text-yellow-100 font-bilbo'>
-           FLOCOIN
-          </h2>
+        <a href="/" className="flex items-center gap-x-2">
+          <img src={logo} alt='logo' className='w-12'></img>
+          <h1 className='text-2xl font-bold text-yellow-100 font-bilbo'>
+           Flo Coin Global
+          </h1>
         </a>
 
         <button onClick={ToggleSidebar} className="nav cursor-pointer">
