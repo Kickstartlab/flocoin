@@ -346,7 +346,7 @@ export default function Home() {
                             </a>
                         </div>
 
-                        <div className='absolute w-screen h-screen mt-20 flex mx-auto lg:-ml-24'>
+                        <div className='absolute w-screen h-screen mt-20 flex mx-auto lg:-ml-24 -ml-6'>
                             <Grid spacing={130} />
                         </div>
 
