@@ -1,6 +1,4 @@
 import React, { useState } from 'react'
-import logo from '../assets/logo.png';
-
 export default function Menu() {
 
   const [isOpen, setIsopen] = useState(false);

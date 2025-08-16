@@ -1,4 +1,4 @@
-import React, { useEffect, useRef, Suspense } from 'react'
+import React, { useEffect, Suspense } from 'react'
 import Menu from './Menu'
 import utility1 from '../assets/utility1.png';
 import utility2 from '../assets/utility2.png';
@@ -16,7 +16,6 @@ import 'aos/dist/aos.css';
 import Work from './Work';
 import Faq from './Faq';
 import Grid from './Grid';
-// import VariableProximity from './VariableProximity';
 import Threads from './Threads';
 import Roadmap from './Roadmap';
 import partner1 from '../assets/partner1.png';
@@ -34,7 +33,6 @@ const CurvedLoop = React.lazy(() => import('./CurvedLoop'));
 
 
 export default function Home() {
-    const containerRef = useRef(null);
     useEffect(() => {
         AOS.init({
             duration: 600,
