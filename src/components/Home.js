@@ -6,7 +6,6 @@ import utility3 from '../assets/utility3.png';
 import utility4 from '../assets/utility4.png';
 import x from '../assets/x.png';
 import telegram from '../assets/telegram.png';
-import discord from '../assets/discord.png';
 import instagram from '../assets/instagram.png';
 import trust1 from '../assets/trust1.png';
 import trust2 from '../assets/trust2.png';
@@ -27,6 +26,7 @@ import team2 from '../assets/2.jpeg';
 import team3 from '../assets/3.jpeg';
 import Tilt from 'react-parallax-tilt';
 import video from "../assets/video.mp4";
+import whitepaper from '../assets/whitepaper.pdf';
 const Hyperspeed = React.lazy(() => import('./Hyperspeed'));
 const CircularGallery = React.lazy(() => import('./CircularGallery'));
 const CurvedLoop = React.lazy(() => import('./CurvedLoop'));
@@ -82,31 +82,20 @@ export default function Home() {
                     <div className="lg:flex justify-center items-end lg:pt-6 pt-8 text-center mx-auto lg:space-y-0 space-y-6">
 
                         <div className='space-y-6 lg:w-4/12 lg:-translate-y-12'>
-                            <div className="flex justify-center gap-5 items-center mx-auto">
-                                <a data-aos='fade-left' href="/">
-                                    <button className="rounded-full md:py-3 py-2 md:font-extrabold font-bold md:px-5 px-4 bg-yellow-100 text-black-100 uppercase">
-                                        Launch APP
-                                    </button>
-                                </a>
-
-                                <a data-aos='fade-right' href="/">
+                                <a data-aos='fade-right' href={whitepaper} target = "_blank">
                                     <button className="rounded-full md:py-3 py-2 md:font-extrabold font-bold md:px-5 px-4 bg-yellow-100 text-black-100 uppercase">
                                         Whitepaper
                                     </button>
                                 </a>
-                            </div>
                             <div className="flex items-center justify-center pb-5 md:gap-6 gap-4 mx-auto">
-                                <a href='/'>
+                                <a href='https://t.me/flocoinglobal'>
                                     <img loading="lazy" src={telegram} alt='telegram' className='md:w-10 w-8'></img>
                                 </a>
-                                <a href='/'>
-                                    <img loading="lazy" src={instagram} alt='telegram' className='md:w-10 w-8'></img>
+                                <a href='https://www.instagram.com/flocoinofficial?igsh=Z2RkdmxmZ2l3dmoy'>
+                                    <img loading="lazy" src={instagram} alt='instagram' className='md:w-10 w-8'></img>
                                 </a>
-                                <a href='/'>
-                                    <img loading="lazy" src={x} alt='telegram' className='md:w-10 w-8'></img>
-                                </a>
-                                <a href='/'>
-                                    <img loading="lazy" src={discord} alt='telegram' className='md:w-10 w-8'></img>
+                                <a href='https://x.com/flocoinofficial?s=21&t=2lfaZvomECsX0A8EqHVj8Q'>
+                                    <img loading="lazy" src={x} alt='X' className='md:w-10 w-8'></img>
                                 </a>
                             </div>
                         </div>
@@ -346,7 +335,7 @@ export default function Home() {
                             </a>
                         </div>
 
-                        <div className='absolute w-screen h-screen mt-20 flex mx-auto lg:-ml-24 -ml-6'>
+                        <div className='w-full h-[50%] flex mx-auto absolute left-0 right-0'>
                             <Grid spacing={130} />
                         </div>
 
@@ -383,7 +372,7 @@ export default function Home() {
             {/* Team section */}
 
             <section id='use' className="lg:px-20 px-5 lg:py-20 py-6">
-                <div className='container mx-auto'>
+                <div className='container mx-auto relative z-20'>
 
                     <div className='flex flex-wrap items-start justify-between md:gap-28 gap-12 lg:py-6'>
                         <div className='space-y-5 lg:w-5/12'>
@@ -500,17 +489,14 @@ export default function Home() {
                     </div>
 
                     <div className="flex items-center justify-center py-6 gap-6 mx-auto">
-                        <a href='/'>
+                        <a href='https://t.me/flocoinglobal'>
                             <img loading="lazy" src={telegram} alt='telegram' className='w-10 hover:-translate-y-2 duration-200'></img>
                         </a>
-                        <a href='/'>
+                        <a href='https://www.instagram.com/flocoinofficial?igsh=Z2RkdmxmZ2l3dmoy'>
                             <img loading="lazy" src={instagram} alt='telegram' className='w-10 hover:-translate-y-2 duration-200'></img>
                         </a>
-                        <a href='/'>
+                        <a href='https://x.com/flocoinofficial?s=21&t=2lfaZvomECsX0A8EqHVj8Q'>
                             <img loading="lazy" src={x} alt='telegram' className='w-10 hover:-translate-y-2 duration-200'></img>
-                        </a>
-                        <a href='/'>
-                            <img loading="lazy" src={discord} alt='telegram' className='w-10 hover:-translate-y-2 duration-200'></img>
                         </a>
                     </div>
 

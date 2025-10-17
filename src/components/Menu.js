@@ -32,19 +32,13 @@ export default function Menu() {
             <li><a href="#join" className="text-slate-400 hover:text-white-100">Join us</a></li>
           </ul>
         </nav>
-
-        <div>
-          <button onClick={() => setShow(!show)} className="bg-yellow-100 rounded-full py-2 lg:px-6 px-4 font-extrabold text-black-100 uppercase">
-            Connect Wallet
-          </button>
-        </div>
       </div>
 
       <div className="lg:hidden flex items-center justify-between py-6">
         <a href="/" className="flex items-center gap-x-2">
           <img src={logo} alt='logo' className='w-10'></img>
           <h1 className='text-md font-bold text-yellow-100 font-draker uppercase'>
-           Flo Coin Global
+            Flo Coin Global
           </h1>
         </a>
 
@@ -64,7 +58,6 @@ export default function Menu() {
             <li><a href="#about" className="">About us</a></li>
             <li><a href="#tokenomics" className="">Tokenomics</a></li>
             <li><a href="#join" className="">Join us</a></li>
-            <li><a href="#join" className="text-yellow-100">Connect Wallet</a></li>
           </ul>
         </div>
       </div>

@@ -10,7 +10,7 @@ const Grid = ({ spacing = 150 }) => {
   const verticalLines = Array.from({ length: verticalCount }, (_, i) => ({
     left: `${i * spacing}px`,
     delay: `${Math.random() * 5}s`,
-    duration: `${6 + Math.random() * 3}s`
+    duration: `${5 + Math.random() * 3}s`
   }));
 
   const horizontalLines = Array.from({ length: horizontalCount }, (_, i) => ({

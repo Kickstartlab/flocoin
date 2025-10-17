@@ -667,6 +667,8 @@ canvas {
 /* Vertical lines */
 .vline {
   position: absolute;
+  left: 0;
+  right: 0;
   width: 1px;
   height: 100%;
   background: rgba(255, 255, 255, 0.1);
@@ -706,7 +708,7 @@ canvas {
   display: block;
   position: absolute;
   width: 15vw;
-  height: 100%;
+  height: 80%;
   left: -50%;
   top: 0;
   background: linear-gradient(
