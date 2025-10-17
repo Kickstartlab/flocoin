@@ -328,15 +328,15 @@ export default function Home() {
 
                         <div className='flex items-start md:gap-28 gap-12 lg:py-6'>
                             <a href='https://app.solidproof.io/projects/flo-coin-global'>
-                                <img loading="lazy" data-aos='zoom-in' src={trust1} alt='trust' className='md:w-52 w-28'></img>
+                                <img loading="lazy" data-aos='zoom-in' src={trust1} alt='trust' className='md:w-48 w-24'></img>
                             </a>
                             <a href='https://audit.cfg.ninja/flo-coin-global'>
-                                <img loading="lazy" data-aos='zoom-in' src={trust2} alt='trust' className='md:w-52 w-28'></img>
+                                <img loading="lazy" data-aos='zoom-in' src={trust2} alt='trust' className='md:w-48 w-24'></img>
                             </a>
                         </div>
 
-                        <div className='w-full h-[50%] flex mx-auto absolute left-0 right-0'>
-                            <Grid spacing={130} />
+                        <div className='w-full h-[55%]'>
+                            <Grid/>
                         </div>
 
                         <p className='font-black uppercase text-white-50'>FloCoin is built with transparency, performance, and long-term trust in mind.</p>

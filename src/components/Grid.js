@@ -1,6 +1,6 @@
 import React from "react";
 
-const Grid = ({ spacing = 150 }) => {
+const Grid = ({ spacing = 130 }) => {
   const vw = window.innerWidth;
   const vh = window.innerHeight;
 
